@@ -1,0 +1,53 @@
+# =====================================================
+# Render Deployment Configuration
+# =====================================================
+# This file defines backend (Flask) and frontend (React/Vite) services.
+# Both are containerized via Docker and deployed to Render's free plan.
+# =====================================================
+
+services:
+  # ===================================================
+  # 🧠 Backend (Flask)
+  # ===================================================
+  - type: web
+    name: director-backend
+    runtime: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+
+    envVars:
+      - key: FLASK_APP
+        value: director.entrypoint.api.server
+      - key: SERVER_DEBUG
+        value: "1"
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PORT
+        value: "10000"
+      # Optional: if using Redis, Postgres, etc.
+      # - key: DATABASE_URL
+      #   fromDatabase:
+      #     name: director-db
+      #     property: connectionString
+
+  # ===================================================
+  # 🎨 Frontend (React / Vite / Next)
+  # ===================================================
+  - type: web
+    name: director-frontend
+    runtime: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+
+    envVars:
+      # Adjust if you proxy API requests (important for local dev)
+      - key: VITE_API_URL
+        value: https://director-backend.onrender.com
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "5173"

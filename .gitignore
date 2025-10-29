@@ -1,0 +1,61 @@
+# ----------------------------
+# OS and IDE files
+# ----------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# ----------------------------
+# Python / Backend
+# ----------------------------
+venv/
+.venv/
+**/__pycache__/
+**/*.py[cod]
+*.egg-info/
+*.log
+*.db
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.coverage
+.cache/
+instance/
+
+# ----------------------------
+# Node / Frontend
+# ----------------------------
+**/node_modules/
+**/dist/
+**/.next/
+**/.nuxt/
+**/.turbo/
+*.mjs
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# ----------------------------
+# Environment and Config
+# ----------------------------
+.env
+.env.*
+!.env.example   # Keep the template for others
+docker-compose.override.yml
+*.bak
+*.backup
+
+# ----------------------------
+# Build / Docs / MkDocs
+# ----------------------------
+site/
+docs/_build/
+mkdocs_build/
+*.tmp
+*.log
+
+# ----------------------------
+# Project-specific
+# ----------------------------
+backend/director/downloads/
