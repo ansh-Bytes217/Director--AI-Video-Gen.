@@ -74,7 +74,8 @@ install_node_with_nvm() {
             nvm use $node_version
             echo "✅ Node.js $node_version and npm have been successfully installed with nvm!"
         else
-            echo "⏭️ Skipping Node.js installation."
+            echo "⏭️ Skipping Node.js installation.
+            "
         fi
     fi
 }
