@@ -40,7 +40,7 @@ services:
     runtime: docker
     region: singapore
     plan: free
-    dockerfilePath: ./frontend/Dockerfile
+    dockerfilePath: ./frontend/Dockerfile.sh
     dockerContext: ./frontend
 
     envVars:
