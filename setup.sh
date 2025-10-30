@@ -13,7 +13,7 @@ confirm() {
 }
 
 install_nvm() {
-    # Load nvm if it's already installed
+    # Load nvm if it's already installed!
     if [ -s "$NVM_DIR/nvm.sh" ]; then
         . "$NVM_DIR/nvm.sh"
     elif [ -s "$HOME/.nvm/nvm.sh" ]; then
