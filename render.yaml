@@ -10,22 +10,22 @@ services:
   # 🧠 Backend (Flask)
   # ===================================================
   - type: web
-    name: director-backend
-    runtime: docker
-    region: singapore
-    plan: free
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+   - name: director-backend
+   - runtime: docker
+   - region: singapore
+   - plan: free
+   - dockerfilePath: ./backend/Dockerfile
+   - dockerContext: ./backend
 
     envVars:
       - key: FLASK_APP
-        value: director.entrypoint.api.server
+       - value: director.entrypoint.api.server
       - key: SERVER_DEBUG
-        value: "1"
+       - value: "1"
       - key: PYTHONUNBUFFERED
-        value: "1"
+       - value: "1"
       - key: PORT
-        value: "10000"
+       - value: "10000"
       # Optional: if using Redis, Postgres, etc.
       # - key: DATABASE_URL
       #   fromDatabase:
