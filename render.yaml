@@ -44,7 +44,7 @@ services:
     dockerContext: ./frontend
 
     envVars:
-      # Adjust if you proxy API requests (important for local dev)
+      # Adjust if you proxy API requests (important for local dev immediate)
       - key: VITE_API_URL
         value: https://director-backend.onrender.com
       - key: NODE_ENV
