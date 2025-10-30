@@ -8,7 +8,7 @@ confirm() {
             [Yy]* ) return 0;;
             [Nn]* ) return 1;;
             * ) echo "Please answer yes (y) or no (n).";;
-        esac
+         esac
     done
 }
 
