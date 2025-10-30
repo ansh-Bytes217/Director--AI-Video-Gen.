@@ -46,8 +46,8 @@ services:
     envVars:
       # Adjust if you proxy API requests (important for local dev immediate)
       - key: VITE_API_URL
-        value: https://director-backend.onrender.com
+       - value: https://director-backend.onrender.com
       - key: NODE_ENV
-        value: production
+       - value: production
       - key: PORT
-        value: "5173"
+       - value: "5173"
