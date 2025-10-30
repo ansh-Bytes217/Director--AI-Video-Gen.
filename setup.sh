@@ -110,7 +110,7 @@ detect_package_manager() {
         return 1
     fi
 }
-
+#install version dependency
 install_dependency() {
     local package_manager=$1
     local dependency=$2
