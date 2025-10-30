@@ -164,7 +164,7 @@ install_python_and_pip() {
             echo "❌ Current Python version ($PYTHON_VERSION) is less than the required 3.9, trying to upgrade it.."
         fi
     else
-        echo "❌ Python 3 is not installed."
+        echo "❌ Python version is not installed."
     fi
     echo "⚙️ Attempting to install Python 3.9 or higher..."
     package_manager=$(detect_package_manager)
