@@ -214,7 +214,7 @@ install_python_and_pip() {
     fi
 
     if ! python3 -m venv --help &> /dev/null; then
-        echo "📦 venv module is not installed. Installing..."
+        echo "📦 venv module is not installed. Installing...."
         install_dependency $package_manager python3-venv
     fi
 }
@@ -257,7 +257,7 @@ cd ..
 make install-be
 make init-sqlite-db
 
-# Frontend setup
+# The Frontend setup
 cd frontend
 
 echo "
