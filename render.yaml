@@ -5,7 +5,7 @@
 # Both are containerized via Docker and deployed to Render's free plan.
 # =====================================================
 
-services:
+- services:
   # ===================================================
   # 🧠 Backend (Flask)
   # ===================================================
