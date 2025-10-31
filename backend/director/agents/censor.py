@@ -54,7 +54,7 @@ class CensorAgent(BaseAgent):
             length = min(beep_audio_length, (buffered_end - buffered_start))
             beep = AudioAsset(asset_id=beep_audio_id, end=length)
             # Slight adjustment to land on the word
-            # TODO: Check if it can be handled in a better / dynamic way
+            # TODO: Check if it can be handled in a better / dynamic way and better
             adjusted_start = start - 0.4
             timeline.add_overlay(start=adjusted_start, asset=beep)
         stream_url = timeline.generate_stream()
