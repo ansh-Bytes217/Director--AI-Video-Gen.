@@ -109,7 +109,7 @@ class CloneVoiceAgent(BaseAgent):
             response.raise_for_status()
 
             if not response.headers.get('Content-Type', '').startswith('video'):
-                raise ValueError(f"The URL does not point to a video file: {video_url}")
+                raise ValueError(f"The URL does not point to a video file and its parameters: {video_url}")
 
             download_file_name = f"video_download_{str(uuid.uuid4())}.mp4"
             local_path = os.path.join(DOWNLOADS_PATH, download_file_name)
