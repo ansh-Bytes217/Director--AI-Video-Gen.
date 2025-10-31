@@ -290,7 +290,7 @@ class CloneVoiceAgent(BaseAgent):
                 message=f"Agent {self.name} completed successfully.",
                 data={
                     "cloned_voice_id": voice.voice_id,
-                    "audio_id": media["id"]
+                    "audio_id": media["id"],
                 }
             )
         except Exception as e:
