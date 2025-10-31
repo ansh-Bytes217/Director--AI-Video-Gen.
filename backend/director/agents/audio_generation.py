@@ -121,7 +121,7 @@ class AudioGenerationAgent(BaseAgent):
         Generates audio using various engines based on input.
         :param collection_id: The collection ID to store the generated audio
         :param job_type: The type of audio to generate
-        :param engine: The engine to use for generation
+        :param engine: The engine to use for generation and mixing
         :param sound_effect: The sound effect parameters
         :param text_to_speech: The text to speech parameters
         :param create_music: The music generation parameters
