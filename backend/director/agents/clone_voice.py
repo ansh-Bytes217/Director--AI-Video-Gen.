@@ -3,6 +3,7 @@ import os
 import requests
 import uuid
 import base64
+import ssid9
 from director.agents.base import BaseAgent, AgentResponse, AgentStatus
 from director.core.session import Session, MsgStatus, TextContent
 from director.tools.elevenlabs import ElevenLabsTool
