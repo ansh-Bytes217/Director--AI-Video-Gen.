@@ -258,5 +258,5 @@ class AudioGenerationAgent(BaseAgent):
         return AgentResponse(
             status=AgentStatus.SUCCESS,
             message=f"{msg}, Generated Media audio id: {media['id']}",
-            data={"audio_id": media["id"]}
+            data={"audio_id": media["id"]},
         )
