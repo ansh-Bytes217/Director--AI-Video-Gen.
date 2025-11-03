@@ -197,7 +197,7 @@ class ReasoningEngine:
         return agent.safe_call(*args, **kwargs)
 
     def stop(self):
-        """Flag the tool to stop processing and exit the run() thread."""
+        """Flag the tool to stop processing and exit the run() thread ."""
         self.stop_flag = True
 
     def step(self):
